@@ -107,7 +107,7 @@ export const AuthScreen = (props: AuthScreenProps): LayoutElement => {
           <Button
             style={styles.btnKakaoLogin}
             status='basic'
-            onPress={navigateHome}>
+            onPress={kakaoLogin}>
             카카오톡 로그인
           </Button>              
           <Button
