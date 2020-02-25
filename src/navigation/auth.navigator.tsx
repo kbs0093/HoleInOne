@@ -1,9 +1,10 @@
-
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { AppRoute } from './app-routes';
-import { AuthScreen } from '../scenes/auth';
-import { LoadingScreen } from '../scenes/checkLogin';
+import { 
+  AuthScreen,
+  LoadingScreen,   
+} from '../scenes/auth';
 
 const Stack = createStackNavigator();
 

@@ -34,7 +34,6 @@ if (!KakaoLogins) {
   console.error('Module is Not Linked');
 }
 
-
 const logCallback = (log, callback) => {
   console.log(log);
   callback;
@@ -107,17 +106,27 @@ export const AuthScreen = (props: AuthScreenProps): LayoutElement => {
           </Button>
           <Button
             style={styles.btnKakaoLogin}
-            onPress={kakaoLogin}>
+            status='basic'
+            onPress={navigateHome}>
             카카오톡 로그인
           </Button>              
           <Button
             style={styles.noAccountButton}
-            appearance='ghost'
-            status='basic'
+            appearance='ghost' // 버튼 테두리 안보이게함
+            status='warning'  // 노란색으로 표시
             onPress={() => {
-              Linking.openURL('https://healthy-it-world.tistory.com/');
+              Linking.openURL('https://healthy-it-world.tistory.com/'); // 회원가입 페이지로 이동
             }}>
-            아이디가 없으신가요?
+            회원가입 하기
+          </Button>
+          <Button
+            style={styles.noAccountButton}
+            appearance='ghost' // 버튼 테두리 안보이게함
+            status='warning'  // 노란색으로 표시
+            onPress={() => {
+              Linking.openURL('https://healthy-it-world.tistory.com/'); // 비밀번호 찾기 페이지로 이동
+            }}>
+            아이디 / 비밀번호 찾기
           </Button>
         </View>
       </ImageBackground>

@@ -71,8 +71,3 @@ export const PlusIcon = (style): IconElement => (
 export const SMSIcon = (style): IconElement => (
   <Icon {...style} name='star'/>
 );
-
-
-
-
-
